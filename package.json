@@ -1,6 +1,6 @@
 {
-  "name": "@example/blog",
-  "version": "0.0.1",
+  "name": "@pavi2410/blog",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
