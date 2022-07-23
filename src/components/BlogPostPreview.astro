@@ -6,50 +6,12 @@ export interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="post-preview">
+<article class="rounded-xl border hover:border-blue-500">
 	<header>
-		<p class="publish-date">{post.frontmatter.publishDate}</p>
-		<a href={post.url}><h1 class="title">{post.frontmatter.title}</h1></a>
+		<a class="before:absolute hover:no-underline" href={post.url}>
+			<h1 class="title">{post.frontmatter.title}</h1>
+		</a>
 	</header>
 	<p>{post.frontmatter.excerpt}</p>
-	<a href={post.url}>Read more</a>
+	<p class="publish-date">{post.frontmatter.publishDate}</p>
 </article>
-
-<style>
-	.content :global(main > * + *) {
-		margin-top: 1rem;
-	}
-
-	.post-preview {
-		padding-bottom: 2rem;
-		margin-bottom: 2rem;
-		border-bottom: 4px solid var(--theme-divider);
-	}
-
-	header {
-		align-items: flex-start;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding-bottom: 2rem;
-		text-align: left;
-	}
-
-	.title,
-	.author,
-	.publish-date {
-		margin: 0;
-	}
-
-	.publish-date,
-	.author {
-		font-size: 1.25rem;
-		color: var(--theme-text-lighter);
-	}
-
-	.title {
-		font-size: 2.25rem;
-		font-weight: 700;
-		color: var(--theme-text);
-	}
-</style>
