@@ -1,9 +1,5 @@
 ---
 layout: '@/layouts/BlogLayout.astro'
-setup: |
-  import cowsayDemoImg from '/public/assets/blog/gsoc-2020-mit-app-inventor-project-vce/Cowsay_demo.png'
-  import simpleLabelDemoImg from '/public/assets/blog/gsoc-2020-mit-app-inventor-project-vce/SimpleLabel_demo.png'
-  import iframimplSeqdiagramImg from '/public/assets/blog/gsoc-2020-mit-app-inventor-project-vce/iFrameImpl_SeqDiagram.png'
 title: 'GSoC 2020 MIT App Inventor Project VCE'
 excerpt: 'My experience working with MIT App Inventor team during GSoC 2020'
 publishDate: '2020-08-28'
@@ -36,7 +32,7 @@ A ***V**isible **C**omponent **E**xtension* (or VCE) is a type of extension whic
 My name is [Pavitra Golchha](https://pavi2410.me). I'm a CSE student. I live in India. I'm passionate about computers and programming. I love my weapons - Kotlin, JavaScript, Python. I like to play badminton, listen to music and learn new stuffs.
 
 ### About MIT App Inventor
-![App Inventor logo](/assets/blog/gsoc-2020-mit-app-inventor-project-vce/MIT-App-Inventor-logo.png)
+![App Inventor logo](/assets/blog/MIT-App-Inventor-logo.png)
 [App Inventor](https://appinventor.mit.edu) is a web-based no-code Android app maker. It allows anyone to create an app without any prior coding knowledge. It features a drag-and-drop UI designer, and a Blocks editor. It is mostly a learning tool that introduces one to computer science and programming concepts using its blocks model, based on [Blockly](https://developers.google.com/blockly/). It empowers students to turn their ideas into reality as it did for me :)
 
 ### My Experience with MIT App Inventor Open Source Project
@@ -46,7 +42,7 @@ I am an App Inventor user since 2015, an extension dev and an open source contri
 [Susan](https://github.com/SusanRatiLane) and [Evan](https://github.com/ewpatton) helped me a lot. They are very knowledgeable, friendly and supportive. They helped me with every big and small problems I faced. I am very fortunate to have them as my mentors.
 
 ### My Exterience with Google Summer of Code 2020
-![GSoC logo](/assets/blog/gsoc-2020-mit-app-inventor-project-vce/GSoC-logo.png)
+![GSoC logo](/assets/blog/GSoC-logo.png)
 The 3-month long journey has suddenly felt short :( I enjoyed working for the organisation of my choice. I am very grateful to have this opportunity.
 
 ## My Contributions
@@ -105,7 +101,7 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
     MockComponentRegistry.register(MockSimpleLabel.TYPE, MockSimpleLabel)
     ```
   #### Demo
-  <Image src={simpleLabelDemoImg} alt="Working of SimpleLabel VCE" />
+  ![Working of SimpleLabel VCE](/assets/blog/SimpleLabel_demo.png)
     
 - ### [Cowsay](https://github.com/pavi2410/vce-samples/tree/cowsay)
   An extension that displays text said by cow; uses script element-based implementation
@@ -144,7 +140,7 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
     MockComponentRegistry.register(MockCowsay.TYPE, MockCowsay.create)
     ```
   #### Demo
-  <Image src={cowsayDemoImg} alt="Working of Cowsay VCE" />
+  ![Working of Cowsay VCE](/assets/blog/Cowsay_demo.png)
     
 ## Implementation
 
@@ -164,7 +160,7 @@ The goal of the project is to develop a mechanism to load untrusted JS code from
 > }
 > ```
 
-<Image src={iframimplSeqdiagramImg} />
+![iFrame sequence diagram](/assets/blog/iFrameImpl_SeqDiagram.png)
 
 I wanted to reuse the existing Mock API for this as well, so I created a VCE SDK which uses the async messaging system under the hood. The VCE SDK resides on the server-side, so it can be easily updated and maintained.
 
