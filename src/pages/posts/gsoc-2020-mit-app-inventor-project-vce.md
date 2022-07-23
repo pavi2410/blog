@@ -57,7 +57,7 @@ The 3-month long journey has suddenly felt short :( I enjoyed working for the or
     - Added a MockScriptsManager which is responsible for loading, unloading of Mocks
   
 ### Prototype II
-  - [Branch with the new iFrame-based sandbox implementation](https://github.com/pavi2410/appinventor-sources/tree/mvce3) <Badge text="WIP" />
+  - [Branch with the new iFrame-based sandbox implementation](https://github.com/pavi2410/appinventor-sources/tree/mvce3)
     - First commit: [Added BuildTools](https://github.com/mit-cml/appinventor-sources/commit/61541e0c5a41f693005369a1a74f404e5aef0c02)
     - Last commit: [JUST MADE THIS WORK UP AND RUNNING](https://github.com/mit-cml/appinventor-sources/commit/30a3e1b2a0dbe7ecc5544d90fc07d42e2bcb1b91)
   - [iFrame-based VCE SDK](https://gist.github.com/pavi2410/18195e3e6096aa257aa0341524d0da9e)
@@ -174,8 +174,8 @@ When this worked, it made my day 🥳🎉 I was full of joy that day 😁 I coul
 - Getting the GWT client to work with dynamically loaded external JavaScript code
 
 ## Future Work
-- Can't create more than one instance of a VCE <Badge text="WIP" />
-- Reloading the page causes a runtime error, making VCE implementation useless <Badge text="WIP" />
+- Can't create more than one instance of a VCE
+- Reloading the page causes a runtime error, making VCE implementation useless
 - Implement callback messaging system with iframe
 - Support version upgrades
 - Mock Container support
