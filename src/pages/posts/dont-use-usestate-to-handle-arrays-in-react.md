@@ -1,5 +1,5 @@
 ---
-layout: '@/layouts/BlogLayout.astro'
+layout: '@/layouts/PostLayout.astro'
 title: "Don't use useState to handle arrays in React"
 excerpt: 'Improve readabilty of your React components by not using useState to handle arrays.'
 publishDate: '2022-02-17'

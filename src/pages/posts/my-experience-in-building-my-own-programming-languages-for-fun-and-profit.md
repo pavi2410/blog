@@ -1,5 +1,5 @@
 ---
-layout: '@/layouts/BlogLayout.astro'
+layout: '@/layouts/PostLayout.astro'
 title: 'My experience in building my own programming languages for fun and profit!'
 excerpt: 'Just what the title says... Built FloLang for a jam'
 publishDate: '2020-10-02'

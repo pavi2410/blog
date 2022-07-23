@@ -1,5 +1,5 @@
 ---
-layout: '@/layouts/BlogLayout.astro'
+layout: '@/layouts/PostLayout.astro'
 title: 'REPLisp: Another New Language!?'
 excerpt: 'I built a mini Lisp-like interpreted language from scratch'
 publishDate: '2018-11-26'

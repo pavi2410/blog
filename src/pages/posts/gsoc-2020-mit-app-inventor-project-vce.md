@@ -1,23 +1,21 @@
 ---
-layout: '@/layouts/BlogLayout.astro'
+layout: '@/layouts/PostLayout.astro'
 title: 'GSoC 2020 MIT App Inventor Project VCE'
 excerpt: 'My experience working with MIT App Inventor team during GSoC 2020'
 publishDate: '2020-08-28'
 tags: ['GSoC', 'MIT', 'App Inventor', 'Project', 'VCE', 'Open Source']
 quickLinks:
-  - name: GSoC Project Page
+  - title: GSoC Project Page
     link: #todo
-  - name: Project Proposal
+  - title: Project Proposal
     link: #todo
-  - name: Design Document
+  - title: Design Document
     link: #todo
-  - name: Documentation
+  - title: Documentation
     link: #todo
-  - name: Community Feedback
+  - title: Community Feedback
     link: #todo
 ---
-
-> Quick Links: <Tag text="GSoC Project Page" /> <Tag text="Project Proposal" /> <Tag text="Design Document" /> <Tag text="Documentation" /> <Tag text="Community Feedback" />
 
 ## About the Project
 Extensions in App inventor are currently limited to just non-visible components. Due to this, extensions can't be dragged into the mock form designer. To work around this, extension developers have to get a reference to a visible component as parent under which they create UI views. This, however, defeats the idea of App Inventor, which allows the users to create their UI of their apps using the concept of WYSIWYG.
