@@ -36,7 +36,8 @@ Horizontal rule is created using `---` on a line by itself.
 
 ## Coding - Block
 
-```md
+````md
+```ruby
 # The Greeter class
 class Greeter
   def initialize(name)
@@ -54,6 +55,7 @@ g = Greeter.new("world")
 # Output "Hello World!"
 g.salute
 ```
+````
  
 will produce  
 
