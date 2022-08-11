@@ -1,6 +1,5 @@
 ---
 import BaseHead from '@/components/BaseHead.astro';
-import BlogHeader from '@/components/BlogHeader.astro';
 import { formatDate } from '@/utils';
 
 export interface Props {
@@ -45,14 +44,13 @@ const { content: { title, excerpt, publishDate, author, heroImage, permalink, al
 		,prose-custom :not(.astro-code) code {
 			@apply prose-code:before:hidden prose-code:after:hidden;
 			@apply prose-code:rounded prose-code:p-1 prose-code:px-2;
-			@apply prose-code:bg-sky-100 prose-code:dark:!bg-sky-700;
+			/* @apply prose-code:bg-sky-100 prose-code:dark:!bg-sky-700; */
 		}
 	</style>
 </head>
 
 <body class="font-sans dark:bg-gray-900">
-	<BlogHeader />
-	<div class="prose prose-xl dark:prose-invert prose-custom mx-auto">
+	<div class="prose prose-xl dark:prose-invert prose-custom mx-auto my-8">
 		<article class="px-2">
 			<header class="text-left">
 				{heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}

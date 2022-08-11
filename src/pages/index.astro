@@ -1,10 +1,9 @@
 ---
 import BaseHead from '@/components/BaseHead.astro';
-import BlogHeader from '@/components/BlogHeader.astro';
 import BlogPostPreview from '@/components/BlogPostPreview.astro';
 
 let title = 'My personal blog';
-let description = 'I write occasionaly about stuff I find interesting.';
+let description = 'I occasionally write about stuff I find interesting.';
 let permalink = 'https://blog.pavi2410.me/';
 
 let allPosts = await Astro.glob('./posts/*.md');
@@ -12,22 +11,24 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead {title} {description} {permalink} />
-	</head>
 
-	<body>
-		<BlogHeader />
-		<div class="container mx-auto">
-			<main class="content">
-				<section class="intro">
-					<h1 class="latest">{title}</h1>
-					<p>{description}</p>
-				</section>
-				<section aria-label="Blog post list">
-					{allPosts.map((p) => <BlogPostPreview post={p} />)}
-				</section>
-			</main>
-		</div>
-	</body>
+<head>
+	<BaseHead {title} {description} {permalink} />
+</head>
+
+<body>
+	<div class="container mx-auto max-w-prose space-y-8 my-8">
+		<h1 class="text-5xl leading-normal font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+			My Blog
+		</h1>
+		<section>
+			<p class="text-xl">{description}</p>
+		</section>
+		<section aria-label="Blog post list" class="space-y-4">
+			{allPosts.map((p) =>
+			<BlogPostPreview post={p} />)}
+		</section>
+	</div>
+</body>
+
 </html>

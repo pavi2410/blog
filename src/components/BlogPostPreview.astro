@@ -1,4 +1,6 @@
 ---
+import { formatDate } from "@/utils";
+
 export interface Props {
 	post: any;
 }
@@ -6,12 +8,12 @@ export interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="rounded-xl border hover:border-blue-500">
+<article class="rounded-lg border hover:border-blue-500 p-4">
 	<header>
 		<a class="before:absolute hover:no-underline" href={post.url}>
-			<h1 class="title">{post.frontmatter.title}</h1>
+			<h1 class="font-bold text-xl">{post.frontmatter.title}</h1>
 		</a>
 	</header>
-	<p>{post.frontmatter.excerpt}</p>
-	<p class="publish-date">{post.frontmatter.publishDate}</p>
+	<p class="italic">{post.frontmatter.excerpt}</p>
+	<p class="text-end">{formatDate(post.frontmatter.publishDate)}</p>
 </article>
