@@ -9,12 +9,12 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/preact": "^0.5.2",
-    "@astrojs/tailwind": "^0.2.4",
+    "@astrojs/preact": "^1.0.1",
+    "@astrojs/tailwind": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
-    "astro": "0.0.0-rc-20220722032928"
+    "astro": "1.0.2"
   },
   "dependencies": {
-    "preact": "^10.10.0"
+    "preact": "^10.10.2"
   }
 }
