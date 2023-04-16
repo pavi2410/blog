@@ -1,74 +1,100 @@
 ---
-import BaseHead from '@/components/BaseHead.astro';
-import { formatDate } from '@/utils';
+import { formatDate } from "@/utils";
+import BaseLayout from "./BaseLayout.astro";
 
 export interface Props {
-	content: {
-		title: string;
-		author: string;
-		publishDate: string;
-		heroImage: string;
-		alt: string;
-	}
+  frontmatter: {
+    title: string;
+    excerpt: string;
+    author: string;
+    publishDate: string;
+    heroImage: string;
+    alt: string;
+  };
 }
 
-const { content: { title, excerpt, publishDate, author, heroImage, permalink, alt, quickLinks } } = Astro.props;
+const {
+  frontmatter: {
+    title,
+    excerpt,
+    publishDate,
+    author,
+    heroImage,
+    permalink,
+    alt,
+    quickLinks,
+  },
+} = Astro.props;
 ---
 
-<html lang="en">
+<style is:global>
+  /* code {
+    counter-reset: step !important;
+    counter-increment: step 0 !important;
+  }
 
-<head>
-	<BaseHead {title} {excerpt} {permalink} />
-	<style is:global>
-		code {
-			counter-reset: step !important;
-			counter-increment: step 0 !important;
-		}
+  code .line::before {
+    content: counter(step);
+    counter-increment: step;
+    width: 1rem;
+    margin-right: 1.5rem;
+    display: inline-block;
+    text-align: right;
+    color: white;
+  } */
 
-		code .line::before {
-			content: counter(step);
-			counter-increment: step;
-			width: 1rem;
-			margin-right: 1.5rem;
-			display: inline-block;
-			text-align: right;
-			color: white;
-		}
+  body {
+    @apply font-sans dark:bg-slate-950;
+  }
 
-		.prose-custom {
-			@apply prose-h2:underline prose-h2:decoration-emerald-300 prose-h2:decoration-4;
-      @apply prose-h3:underline prose-h3:decoration-sky-300 prose-h3:decoration-4;
-			@apply prose-a:text-blue-600;
-		}
+  .prose-custom {
+    @apply prose-h2:underline prose-h2:decoration-emerald-300 prose-h2:decoration-2;
+    @apply prose-h3:underline prose-h3:decoration-sky-300 prose-h3:decoration-2;
+    @apply prose-a:text-blue-600 prose-a:dark:text-sky-50;
+  }
 
-		,prose-custom :not(.astro-code) code {
-			@apply prose-code:before:hidden prose-code:after:hidden;
-			@apply prose-code:rounded prose-code:p-1 prose-code:px-2;
-			/* @apply prose-code:bg-sky-100 prose-code:dark:!bg-sky-700; */
-		}
-	</style>
-</head>
+  :not(pre) > code {
+    @apply before:hidden after:hidden;
+    @apply rounded py-1 px-2 mx-2;
+    @apply outline outline-2 outline-violet-500 dark:outline-violet-700;
+  }
+</style>
 
-<body class="font-sans dark:bg-gray-900">
-	<div class="prose prose-xl dark:prose-invert prose-custom mx-auto my-8">
-		<article class="px-2">
-			<header class="text-left">
-				{heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
-				<h1 class="title">{title}</h1>
-				<p><a href="https://pavi2410.me">Pavitra Golchha</a> • <i>Published on</i> {formatDate(publishDate)}</p>
-			</header>
-			<main>
-				{quickLinks && (
-					<div class="quick-links">
-						{quickLinks.map(({ title, url }) => (
-							<a href={url}>{title}</a>
-						))}
-					</div>
-				)}
-				<slot />
-			</main>
-		</article>
-	</div>
-</body>
-
-</html>
+<BaseLayout title={title} excerpt={excerpt} permalink={permalink}>
+  <div class="prose prose-lg dark:prose-invert prose-custom mx-auto my-8">
+    <article class="px-2">
+      <header class="text-left">
+        {
+          heroImage && (
+            <img
+              width="720"
+              height="420"
+              class="hero-image"
+              loading="lazy"
+              src={heroImage}
+              alt={alt}
+            />
+          )
+        }
+        <h1 class="title">{title}</h1>
+        <p>
+          <a href="https://pavi2410.me">Pavitra Golchha</a> • <i>Published on</i
+          >
+          {formatDate(publishDate)}
+        </p>
+      </header>
+      <main>
+        {
+          quickLinks && (
+            <div class="quick-links">
+              {quickLinks.map(({ title, url }) => (
+                <a href={url}>{title}</a>
+              ))}
+            </div>
+          )
+        }
+        <slot />
+      </main>
+    </article>
+  </div>
+</BaseLayout>
