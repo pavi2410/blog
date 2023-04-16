@@ -1,5 +1,4 @@
 ---
-layout: '@/layouts/PostLayout.astro'
 title: 'MD Test'
 excerpt: 'A markdown test page'
 publishDate: '1970-01-01'

@@ -1,5 +1,4 @@
 ---
-layout: '@/layouts/PostLayout.astro'
 title: 'GSoC 2020 MIT App Inventor Project VCE'
 excerpt: 'My experience working with MIT App Inventor team during GSoC 2020'
 publishDate: '2020-08-28'

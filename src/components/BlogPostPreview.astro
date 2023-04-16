@@ -1,19 +1,21 @@
 ---
-import { formatDate } from "@/utils";
+import type { CollectionEntry } from "astro:content";
 
-export interface Props {
-	post: any;
+interface Props {
+  post: CollectionEntry<"posts">;
 }
 
 const { post } = Astro.props;
 ---
 
 <article class="rounded-lg border hover:border-blue-500 p-4">
-	<header>
-		<a class="before:absolute hover:no-underline" href={post.url}>
-			<h1 class="font-bold text-xl">{post.frontmatter.title}</h1>
-		</a>
-	</header>
-	<p class="italic">{post.frontmatter.excerpt}</p>
-	<p class="text-end">{formatDate(post.frontmatter.publishDate)}</p>
+  <header>
+    <a class="before:absolute hover:no-underline" href={"/posts/" + post.slug}>
+      <h1 class="font-bold text-xl">{post.data.title}</h1>
+    </a>
+  </header>
+  <p class="italic">{post.data.excerpt}</p>
+  <time class="text-end" datetime={post.data.publishDate.toISOString()}>
+    {post.data.publishDate.toDateString()}
+  </time>
 </article>
