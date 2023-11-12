@@ -1,6 +1,6 @@
 ---
 title: 'Sending email via Gmail app directly (no chooser intent)'
-excerpt: 'You are probably here because you want to let your users send email via the Gmail app directly. You also do not want to launch a disambiguation dialog. You are also tired of finding ways to do so that works in 2023. If that's all true, you are in the right place.'
+excerpt: "You are probably here because you want to let your users send email via the Gmail app directly. You also do not want to launch a disambiguation dialog. You are also tired of finding ways to do so that works in 2023. If that's all true, you are in the right place."
 publishDate: '2023-11-11'
 tags: ['android']
 ---
